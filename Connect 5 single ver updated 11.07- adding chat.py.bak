@@ -872,3 +872,52 @@ fr2.pack()
 
 Frontpage.mainloop()
 
+'''	
+Frontpage = Tk()
+
+fr1 = Frame(Frontpage)
+fr2 = Frame(Frontpage)
+FrontLabel = Label(fr1, text = 'How many players?', width = 25)
+PlayerNumButton2 = Button(fr2, text = 'Two', command = PlayFor2)
+PlayerNumButton3 = Button(fr2, text = 'Three', command = PlayFor3)
+PlayerNumButton4 = Button(fr2, text = 'Four', command = PlayFor4)
+fr1.pack()
+fr2.pack()
+FrontLabel.pack()
+PlayerNumButton2.grid(row =0, column = 0)
+PlayerNumButton3.grid(row =0, column = 1)
+PlayerNumButton4.grid(row =0, column = 2)
+
+Frontpage.mainloop()
+
+'''
+
+
+
+
+'''
+# Multi Ver.
+
+Reset = open("C:/Python27/C5Coo.txt","w")
+Reset.close()
+
+
+	
+def clerk(move):
+	ww = open('C:/Python27/C5Coo.txt','a')
+	ww.write(str(move))
+	ww.wrtie('\n')
+	ww.close()	
+	
+def extract():
+	global Bin
+	OO = open('C:/Python27/C5Coo.txt','r')
+	ff = OO.readlines()
+	OO.close()
+	for PP in ff:
+		Bin.append(PP[0:len(PP)-1])
+	return Bin
+	display()
+'''
+
+	
